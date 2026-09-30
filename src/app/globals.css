@@ -1,0 +1,562 @@
+@import "tailwindcss";
+
+/* =========================
+   Base
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: #faf7fb;
+  color: #302535;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* =========================
+   Main
+========================= */
+
+main {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 50px auto;
+}
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+  margin: 0 0 30px;
+
+  color: #7d285b;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+/* =========================
+   Product Search / Form
+========================= */
+
+form {
+  background: #ffffff;
+
+  padding: 28px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid #eadce7;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(112, 43, 91, 0.07);
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px 20px;
+
+  align-items: center;
+}
+
+/* =========================
+   Label
+========================= */
+
+label {
+  color: #574251;
+
+  font-weight: 600;
+
+  margin-left: 4px;
+}
+
+/* =========================
+   Input / Select
+========================= */
+
+input,
+select {
+  padding: 12px 15px;
+
+  border: 1px solid #decfda;
+
+  border-radius: 10px;
+
+  background: #fffdfd;
+
+  color: #352b35;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input::placeholder {
+  color: #aaa0aa;
+}
+
+input:hover,
+select:hover {
+  border-color: #bb719c;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+
+  border-color: #96366f;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(150, 54, 111, 0.12);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #8b2c62,
+    #b93655
+  );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 16px rgba(139, 44, 98, 0.22);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #c7bec5;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+/* =========================
+   Product Section
+========================= */
+
+.product-section {
+  margin-top: 30px;
+}
+
+/* =========================
+   Product Grid
+========================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* =========================
+   Product Card
+========================= */
+
+.product-card {
+  background: #ffffff;
+
+  border: 1px solid #eadce7;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(112, 43, 91, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 16px 35px rgba(112, 43, 91, 0.14);
+}
+
+/* =========================
+   Product Image
+========================= */
+
+.product-image {
+  width: 100%;
+
+  height: 200px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf2f8,
+      #fff4f5
+    );
+}
+
+.product-image img {
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.product-card:hover
+.product-image img {
+  transform: scale(1.07);
+}
+
+/* =========================
+   No Image
+========================= */
+
+.no-image {
+  color: #a397a2;
+
+  font-size: 14px;
+}
+
+/* =========================
+   Product Info
+========================= */
+
+.product-info {
+  padding: 20px;
+}
+
+/* =========================
+   Category
+========================= */
+
+.product-category {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  margin-bottom: 10px;
+
+  border-radius: 20px;
+
+  background: #f3e3ef;
+
+  color: #842a61;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   Product Name
+========================= */
+
+.product-info h2 {
+  margin: 0 0 12px;
+
+  color: #302535;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  min-height: 48px;
+}
+
+/* =========================
+   Price
+========================= */
+
+.product-price {
+  margin-bottom: 10px;
+
+  color: #a52f55;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   Stock
+========================= */
+
+.product-stock {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 18px;
+
+  color: #817582;
+
+  font-size: 13px;
+}
+
+.product-stock strong {
+  color: #7d285b;
+
+  font-size: 14px;
+}
+
+/* =========================
+   Card Actions
+========================= */
+
+.card-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+.card-actions button {
+  flex: 1;
+
+  padding: 10px 8px;
+
+  font-size: 13px;
+}
+
+/* =========================
+   Edit Button
+========================= */
+
+.edit-button {
+  background: linear-gradient(
+    135deg,
+    #7f2d65,
+    #9e3c78
+  );
+}
+
+.edit-button:hover {
+  background: linear-gradient(
+    135deg,
+    #6c2354,
+    #872e64
+  );
+}
+
+/* =========================
+   Delete Button
+========================= */
+
+button.delete,
+button[data-action="delete"] {
+  background: #d45165;
+}
+
+button.delete:hover,
+button[data-action="delete"]:hover {
+  background: #bb3d52;
+
+  box-shadow:
+    0 6px 16px rgba(212, 81, 101, 0.25);
+}
+
+/* =========================
+   Status
+========================= */
+
+.status-message,
+.empty-message {
+  padding: 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #eadce7;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  color: #817582;
+}
+
+.error-message {
+  padding: 15px 18px;
+
+  background: #fff1f4;
+
+  border: 1px solid #f3cbd5;
+
+  border-radius: 12px;
+
+  color: #a52d47;
+}
+
+/* =========================
+   Error Input
+========================= */
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #d94f62;
+
+  background: #fff8fa;
+}
+
+input[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus {
+  box-shadow:
+    0 0 0 4px rgba(217, 79, 98, 0.12);
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1050px) {
+  .product-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   Tablet / Mobile
+========================= */
+
+@media (max-width: 768px) {
+  main {
+    width: 92%;
+
+    margin: 35px auto;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  form {
+    padding: 22px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  input,
+  select,
+  form > button {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-image img {
+    height: 140px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 480px) {
+  main {
+    width: 94%;
+
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .product-image img {
+    height: 180px;
+  }
+
+  .product-info {
+    padding: 18px;
+  }
+}
